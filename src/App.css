@@ -1,0 +1,92 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+@import "https://unpkg.com/open-props/normalize.min.css" layer(demo.support);
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700");
+* {
+  box-sizing: border-box !important;
+  font-family: "Quicksand";
+}
+.App {
+  background-color: rgb(218, 227, 254);
+}
+.rank-container {
+  min-height: 100vh;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row-container {
+  box-sizing: border-box !important;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+.col-container {
+  box-sizing: border-box !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mr-2 {
+  width: 70px;
+  height: 70px;
+  object-fit: cover !important;
+}
+h1,
+h3 {
+  margin: 0 !important;
+  font-size: 1.2rem !important;
+}
+h1 {
+  font-size: 1.5rem !important;
+}
+h3 {
+  font-weight: 700 !important;
+  color: rgb(107, 8, 200) !important;
+}
+#header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+@layer demo {
+  .row-container-winner {
+    /* inline-size: var(--size-content-1); */
+    /* aspect-ratio: var(--ratio-widescreen); */
+    box-sizing: border-box !important;
+    width: 100%;
+    padding: 15px;
+    /* 
+    border: solid var(--size-1) transparent;
+    border-radius: var(--radius-3);
+    background: linear-gradient(var(--surface-1), var(--surface-1)) padding-box,
+      var(--gradient-1) border-box; */
+    border: 4px solid #0000;
+    border-radius: 12px;
+    background: linear-gradient(#f9f9f9, #fefefe) padding-box,
+      linear-gradient(var(--angle), #fd3030, #687aff) border-box;
+    animation: 5s rotate linear infinite;
+  }
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+}
+@media screen and (max-width: 576px) {
+  .rank-container {
+    min-height: 100vh;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+  }
+}
