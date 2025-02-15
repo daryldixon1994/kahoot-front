@@ -1,0 +1,27 @@
+#add-student {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#add-student form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+  margin: auto;
+}
+#add-student form input {
+  all: unset;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+#add-student form button {
+  background-color: blueviolet;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}

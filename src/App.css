@@ -29,6 +29,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+#close-icon {
+  position: absolute;
+  left: -10px;
+  top: -5px;
+  cursor: pointer;
 }
 .mr-2 {
   width: 70px;
@@ -89,4 +96,8 @@ h3 {
     width: 100%;
     margin: auto;
   }
+}
+#numbers-box {
+  display: flex;
+  justify-content: flex-end;
 }

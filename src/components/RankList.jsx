@@ -2,12 +2,13 @@ import Item from "./Item";
 import { Stack } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { mainUrlReq } from "../utils";
 // import { mainUrlReq } from "../utils";
 function RankList() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://kahoot-backend-m4bs.onrender.com/students")
+      .get(`${mainUrlReq}/students`)
       .then((res) => setData(res.data.data))
       .catch((err) => console.dir(err));
   }, []);
